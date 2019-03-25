@@ -29,7 +29,7 @@ namespace AssetStudioCore
         {
             foreach (var n in array)
             {
-                var v = $"{n:0.###}";
+                var v = n.ToString("0.###", System.Globalization.CultureInfo.InvariantCulture);
                 writer.WriteRawValue(v);
             }
         }
